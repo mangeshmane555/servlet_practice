@@ -1,0 +1,46 @@
+package basics;
+import java.io.IOException;
+import java.sql.*;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+//
+@WebServlet("/RegServlet_ServletConfig")
+public class RegServlet_ServletConfig extends HttpServlet {
+	Connection con;
+	private static final long serialVersionUID = 1L;
+    public RegServlet_ServletConfig() {
+        super();
+    }
+	public void init(ServletConfig config) throws ServletException 
+	{
+		try {
+			String driver = config.getInitParameter("driver");
+			String url = config.getInitParameter("url");
+			String username = config.getInitParameter("username");
+			String password = config.getInitParameter("password");
+			//
+			Class.forName(driver);
+			DriverManager.getConnection(url, username, password);
+		} 
+		catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+		
+		doPost(request, response);
+	}
+	public void destroy() {
+		try {
+			con.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

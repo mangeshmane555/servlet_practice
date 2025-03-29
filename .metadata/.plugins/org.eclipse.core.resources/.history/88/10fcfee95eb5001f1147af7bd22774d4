@@ -1,0 +1,30 @@
+package basics;
+//
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.sql.Connection;
+
+@WebServlet("/RegServlet_ServletContext")
+public class RegServlet_ServletContext extends HttpServlet 
+{
+	Connection con;
+	private static final long serialVersionUID = 1L;
+    public RegServlet_ServletContext() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+	public void init(ServletConfig config) throws ServletException {
+		// TODO Auto-generated method stub
+	}
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}
+	public void destroy() {
+		// TODO Auto-generated method stub
+	}
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor=skyblue text=red>
+	<div style="text-align:center">
+		<h2>welcome to Registration </h2>
+		<form method = POST action = login>
+		First Name : <input type=text name=fname>
+		Last : <input type=text name=fname>
+		Username : <input type=text name=uname>
+		Password : <input type=password name=pword>
+		<input type=submit>
+		
+		
+		
+		<input type=submit>
+		<input type=reset>
+		
+	</form>
+		
+	</div>		
+		
+		
+</body>
+</html>
